@@ -1,8 +1,0 @@
-version: 1.0
-name: textservice
-docker:
-  image: your-dockerhub-username/textservice:latest
-  entryPoint: /app/entrypoint.sh
-  params:
-    - name: input_data
-      type: string

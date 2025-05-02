@@ -1,8 +1,0 @@
-version: 1.0
-name: hoteltimelineservice
-docker:
-  image: your-dockerhub-username/hoteltimelineservice:latest
-  entryPoint: /app/entrypoint.sh
-  params:
-    - name: input_data
-      type: string
