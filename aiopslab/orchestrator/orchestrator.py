@@ -165,7 +165,7 @@ class Orchestrator:
 
             action_instr = env_response + "\n" + "Please take the next action"
             
-        print(f"Error count: {error_count}")
+        #print(f"Error count: {error_count}")
         self.session.end()
 
         # A valid submission was made (or) max_steps reached
