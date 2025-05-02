@@ -173,6 +173,9 @@ class Orchestrator:
             results = self.session.problem.eval(
                 self.session.solution, self.session.history, self.session.get_duration()
             )
+            steps = results.get("steps", 0)
+            if steps > 0:
+                results["error_rate"] = error_rate
             self.sprint.result(results)
 
         self.session.set_results(results)
