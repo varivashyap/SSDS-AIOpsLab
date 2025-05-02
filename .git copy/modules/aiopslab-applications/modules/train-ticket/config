@@ -1,0 +1,12 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	worktree = ../../../../../aiopslab-applications/train-ticket
+[remote "origin"]
+	url = https://github.com/xlab-uiuc/train-ticket
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
