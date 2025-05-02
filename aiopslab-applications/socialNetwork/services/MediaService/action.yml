@@ -1,0 +1,8 @@
+version: 1.0
+name: mediaservice
+docker:
+  image: your-dockerhub-username/mediaservice:latest
+  entryPoint: /app/entrypoint.sh
+  params:
+    - name: input_data
+      type: string
