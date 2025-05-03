@@ -441,3 +441,7 @@ rate, which means that many agents repeatedly make unnecessary repititions in ca
 good metric to analyze which agents have a higher level understanding of the task.
 
 The `orchestrator.py` and `templates.py` has been modified to capture and calculate these metrics.
+
+# Services
+We integrated OpenWhisk with some of the microservices in Socialnetwork application.
+
