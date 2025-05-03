@@ -23,7 +23,7 @@ Finally, you will submit your solution for this task using the following API:
 
 {submit_api}
 
-At each turn think step-by-step and respond with:
+Be concise and deliberate in your reasoning and actions. Avoid unnecessary steps or verbose responses, as efficiency (including minimizing communication overhead) is valued. At each turn think step-by-step and respond with:
 Thought: <your thought>
 Action: <your action>
 """
@@ -43,7 +43,7 @@ Finally, you will submit your solution for this task using the following API:
 
 {submit_api}
 
-At each turn respond with:
+Be concise and deliberate in your reasoning and actions. Avoid unnecessary steps or verbose responses, as efficiency (including minimizing communication overhead) is valued. At each turn respond with:
 Action: <your action>
 """
 
@@ -60,6 +60,6 @@ Finally, you will submit your solution for this task using the following API:
 
 {submit_api}
 
-Collaborate with your team to analyze the problem and suggest appropriate API calls.
+Be concise and deliberate in your reasoning and actions. Avoid unnecessary steps or verbose responses, as efficiency (including minimizing communication overhead) is valued. Collaborate with your team to analyze the problem and suggest appropriate API calls.
 Do not execute commands. Suggest API calls in the specified format within markdown code blocks.
 """
