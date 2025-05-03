@@ -401,11 +401,11 @@ Licensed under the [MIT](LICENSE.txt) license.
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft’s Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos is subject to those third-party’s policies.
 --> 
 
-### Implementing Different Evaluation Metrics
+# Implementing Different Evaluation Metrics
 
 We introduced 3 new metrics to evaluate the performances of agents (one of which is a slight modification to an existing metric):
 
-# Agent API Error Rate
+## Agent API Error Rate
 
 Agents often waste steps on unnecessary actions, specifically generating incorrect or non-existant APIs
 (even when provided the correct APIs), as was mentioned in the AIOpsLab paper. Certain agents tend
@@ -417,7 +417,7 @@ We therefore define a new metric:
 Agent API Error Rate: the number of errors the agent causes / the number of total steps the agent takes
 Prompt Optimized Cost
 
-# Prompt Optimized Cost
+## Prompt Optimized Cost
 
 One of the most significant metrics that AIOpsLab currently uses is the ”cost”. The total number of
 tokens generated (both input and output) by the agents/environments is used as an indicator of the cost.
@@ -430,7 +430,7 @@ and actions as each step has a cost associated with the number of tokens used.�
 to this prompt (whether or not it tries to optimize the cost, the tradeoff between cost and performance,
 etc.) gives us useful insight to the standard of the model.
 
-# Stability of Agent Output
+## Stability of Agent Output
 
 We can test the stability of the agent output by running the same tasks multiple times under the same
 conditions and measuring the variance in the output logs, execution path, and final result. This tests the agent’s determinism and robustness.
