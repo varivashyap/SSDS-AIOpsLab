@@ -401,9 +401,11 @@ This project may contain trademarks or logos for projects, products, or services
 --!> 
 
 ### Implementing Different Evaluation Metrics
+
 We introduced 3 new metrics to evaluate the performances of agents (one of which is a slight modification to an existing metric):
 
 # Agent API Error Rate
+
 Agents often waste steps on unnecessary actions, specifically generating incorrect or non-existant APIs
 (even when provided the correct APIs), as was mentioned in the AIOpsLab paper. Certain agents tend
 to generate incorrect API commands in loops, leading to repeated errors in execution. Therefore, we
@@ -415,6 +417,7 @@ Agent API Error Rate: the number of errors the agent causes / the number of tota
 Prompt Optimized Cost
 
 # Prompt Optimized Cost
+
 One of the most significant metrics that AIOpsLab currently uses is the ”cost”. The total number of
 tokens generated (both input and output) by the agents/environments is used as an indicator of the cost.
 While this is a good metric to score LLMs based on, in certain situations, this might not be the most
@@ -427,6 +430,7 @@ to this prompt (whether or not it tries to optimize the cost, the tradeoff betwe
 etc.) gives us useful insight to the standard of the model.
 
 # Stability of Agent Output
+
 We can test the stability of the agent output by running the same tasks multiple times under the same
 conditions and measuring the variance in the output logs, execution path, and final result. This tests the agent’s determinism and robustness.
 We tested various agents using these metrics and the results we obtained are in the Results section.
