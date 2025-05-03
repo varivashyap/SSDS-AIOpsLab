@@ -399,3 +399,40 @@ Licensed under the [MIT](LICENSE.txt) license.
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft’s Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos is subject to those third-party’s policies.
 --!> 
+
+### Implementing Different Evaluation Metrics
+We introduced 3 new metrics to evaluate the performances of agents (one of which is a slight modification to an existing metric):
+
+# Agent API Error Rate
+Agents often waste steps on unnecessary actions, specifically generating incorrect or non-existant APIs
+(even when provided the correct APIs), as was mentioned in the AIOpsLab paper. Certain agents tend
+to generate incorrect API commands in loops, leading to repeated errors in execution. Therefore, we
+believe that it would be a useful metric to count the number of times an agent causes such an error in
+one run.
+
+We therefore define a new metric:
+Agent API Error Rate: the number of errors the agent causes / the number of total steps the agent takes
+Prompt Optimized Cost
+
+# Prompt Optimized Cost
+One of the most significant metrics that AIOpsLab currently uses is the ”cost”. The total number of
+tokens generated (both input and output) by the agents/environments is used as an indicator of the cost.
+While this is a good metric to score LLMs based on, in certain situations, this might not be the most
+ideal way to evaluate an LLM. For instance, an LLM might choose to make unnecessary calls in order
+to get more information in order to perform the task given as it is not aware that the number of tokens
+generated is a metric being measured that should be optimized. Our approach to this way to change the
+input the prompt of the LLM to include the following line: ”Be concise and deliberate in your reasoning
+and actions as each step has a cost associated with the number of tokens used.”. How the LLM responds
+to this prompt (whether or not it tries to optimize the cost, the tradeoff between cost and performance,
+etc.) gives us useful insight to the standard of the model.
+
+# Stability of Agent Output
+We can test the stability of the agent output by running the same tasks multiple times under the same
+conditions and measuring the variance in the output logs, execution path, and final result. This tests the agent’s determinism and robustness.
+We tested various agents using these metrics and the results we obtained are in the Results section.
+The results we obtained for the 4 different LLMs that were evaluated in the AIOpsLab paper were more
+or less consistent with the paper. Our observations were that many agents did in fact have a high error
+rate, which means that many agents repeatedly make unnecessary repititions in calling APIs. This is a
+good metric to analyze which agents have a higher level understanding of the task.
+
+The `orchestrator.py` and `templates.py` has been modified to capture and calculate these metrics.
