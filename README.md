@@ -24,7 +24,6 @@ AIOpsLab is a holistic framework to enable the design, development, and evaluati
 
 Moreover, AIOpsLab provides a built-in benchmark suite with a set of problems to evaluate AIOps agents in an interactive environment. This suite can be easily extended to meet user-specific needs. See the problem list [here](/aiopslab/orchestrator/problems/registry.py#L15).
 
-<\div>
 
 <!-- <h2 id="📦installation">📦 Installation</h2>
 
@@ -400,7 +399,7 @@ Licensed under the [MIT](LICENSE.txt) license.
 ### Trademarks
 
 This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft’s Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos is subject to those third-party’s policies.
---!> 
+--> 
 
 ### Implementing Different Evaluation Metrics
 
