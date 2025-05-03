@@ -24,6 +24,8 @@ AIOpsLab is a holistic framework to enable the design, development, and evaluati
 
 Moreover, AIOpsLab provides a built-in benchmark suite with a set of problems to evaluate AIOps agents in an interactive environment. This suite can be easily extended to meet user-specific needs. See the problem list [here](/aiopslab/orchestrator/problems/registry.py#L15).
 
+<\div>
+
 <!-- <h2 id="📦installation">📦 Installation</h2>
 
 ### Requirements
