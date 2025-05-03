@@ -3,11 +3,13 @@ The following content is from the AIOpsLab repository. We have used the same rep
 <h1>AIOpsLab</h1>
 
 [🤖Overview](#🤖overview) | 
+<!--
 [🚀Quick Start](#🚀quickstart) | 
 [📦Installation](#📦installation) | 
 [⚙️Usage](#⚙️usage) | 
 [📂Project Structure](#📂project-structure) |
 [📄How to Cite](#📄how-to-cite)
+-->
 
 [![ArXiv Link](https://img.shields.io/badge/arXiv-2501.06706-red?logo=arxiv)](https://arxiv.org/pdf/2501.06706)
 [![ArXiv Link](https://img.shields.io/badge/arXiv-2407.12165-red?logo=arxiv)](https://arxiv.org/pdf/2407.12165)
